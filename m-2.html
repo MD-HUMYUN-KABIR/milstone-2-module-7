@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        
+        .a {
+            width: 200px;
+            height: 100px;
+            border: 1px solid red;
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+
+        .a2 {
+            height: 100px;
+            width: 200px;
+            border: 1px solid red;
+        }
+
+        .a2 p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .a3 {
+            height: 50px;
+            width: 80px;
+            background-color: red;
+            transition: transform 2s ease-in, height 2s ease-in-out, width 2s ease-in-out;
+        }
+
+        .a3:hover {
+            height: 80px;
+            width: 150px;
+            transform: rotate(180deg);
+        }
+
+        .field {
+            height: 200px;
+            width: 800px;
+            border: 1px solid rebeccapurple;
+        }
+
+        .bat {
+            height: 150px;
+            width: 30px;
+            background-color: yellowgreen;
+            margin-left: 100px;
+            margin-top: 60px;
+            transform: rotate(45deg);
+            transition: transform .2s ease-in;
+            border-radius: 0 0 0 30px;
+        }
+
+        .field:hover .bat {
+            transform: rotate(-35deg);
+            transform-origin: top right;
+        }
+
+        .ball {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: red;
+            margin-left: 201px;
+            margin-top: -75px;
+            transition: transform .5s ease-out .2s;
+        }
+
+        .field:hover .ball {
+            transform: translate(1500px, -250px);
+        }
+
+        .anim {
+            width: 100%;
+            height: 200px;
+            background-color: gray;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            padding: 50px 200px;
+        }
+
+        .box {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: red;
+            animation: slide 10s ease-in .5s infinite alternate;
+            animation-play-state: running;
+            position: relative;
+            top: 174px;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: scale(1);
+                transform: translateY(0);
+            }
+
+            8% {
+                transform: translateY(-200px);
+                background-color: red;
+            }
+
+            16% {
+                transform: translate(100px, 20px);
+                background-color: blue;
+            }
+
+            24% {
+                transform: scale(1.5);
+                background-color: pink;
+                transform: translate(200px, -200px);
+
+            }
+
+            30% {
+                transform: translate(200px, 0);
+                background-color: red;
+            }
+
+            39% {
+                transform: translate(350px, 0);
+                background-color: blue;
+            }
+
+            47% {
+                transform: translate(380px, -20px);
+                background-color: pink;
+            }
+
+            54% {
+                transform: translate(380px, -70px);
+                background-color: red;
+            }
+
+
+            62% {
+                transform: scale(1.5);
+                background-color: blue;
+                transform: translate(350px, -90px);
+
+            }
+
+            70% {
+                transform: scale(1.5);
+                background-color: pink;
+                transform: translate(200px, -90px);
+
+            }
+
+            77% {
+                transform: scale(1.5);
+                background-color: red;
+                transform: translate(350px, -90px);
+
+            }
+
+            85% {
+                transform: scale(1.5);
+                background-color: blue;
+                transform: translate(380px, -110px);
+
+            }
+
+            90% {
+                transform: scale(1.5);
+                background-color: pink;
+                transform: translate(380px, -160px);
+
+            }
+
+            95% {
+                transform: scale(1.5);
+                background-color: red;
+                transform: translate(350px, -180px);
+
+            }
+
+            100% {
+                transform: scale(1.5);
+                background-color: blue;
+                transform: translate(200px, -180px);
+
+            }
+
+        }
+        .cursr{
+            /* cursor: wait; */
+            cursor: url(./icons/fb.png),auto;
+        }
+     .div-animate{
+        display: flex;
+        gap: 20px;
+     }   
+.div{
+    height: 160px;
+    width: 160px;
+    background-color: orange;
+}
+
+.div1 {
+            animation: div 1s ease-in-out infinite .5s  alternate;
+            animation-play-state: running;
+        }
+
+        @keyframes div {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.05);
+                background-color: rgb(214, 207, 207);
+                color: white;
+            }
+        }
+.div2 {
+            animation: div 1s ease-in-out infinite 3s alternate;
+            animation-play-state: running;
+        }
+
+        @keyframes div {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.05);
+                background-color: rgb(214, 207, 207);
+                color: white;
+            }
+        }
+.div3 {
+            animation: div 1s ease-in-out infinite 6s alternate;
+            animation-play-state: running;
+        }
+
+        @keyframes div {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.05);
+                background-color: rgb(214, 207, 207);
+                color: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="div-animate">
+    <div class="div div1">
+        <img src="./icons/projects.png" alt="">
+        <h1 class="itemNumber">1458</h1>
+        <p class="itemText">Project Finished</p>
+    </div>
+    <div class="div div2">
+        <img src="./icons/projects.png" alt="">
+        <h1 class="itemNumber">1458</h1>
+        <p class="itemText">Project Finished</p>
+    </div>
+    <div class="div div3">
+        <img src="./icons/projects.png" alt="">
+        <h1 class="itemNumber">1458</h1>
+        <p class="itemText">Project Finished</p>
+    </div>
+    <div class="div div4">
+        <img src="./icons/projects.png" alt="">
+                    <h1 class="itemNumber">1458</h1>
+                    <p class="itemText">Project Finished</p>
+    </div>
+</div>
+
+    <div class="a">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, commodi error! Quos debitis ut fugiat harum
+        odit repellat aliquid exercitationem laborum ratione adipisci? Harum sapiente magnam, voluptatem dolore ad quo?
+    </div>
+    <div class="a2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatem maxime quasi nostrum obcaecati,
+            quae aperiam, saepe odit minima voluptate tenetur ipsum quidem ut facere voluptatum atque deleniti officia
+            fuga!</p>
+    </div>
+    <div class="a3">
+        a3
+    </div>
+    <div class="field">
+        <div class="bat"></div>
+        <div class="ball"></div>
+    </div>
+    <div class="anim">
+        <div class="box"></div>
+    </div>
+    <progress>
+        <div id="file"></div>
+    </progress>
+    <meter value=".5"></meter>
+    <details>
+        <summary>look below</summary>
+        <p>huga</p>
+        <p>huga</p>
+        <p>huga</p>
+        <p>huga</p>
+    </details>
+    <img loading="lazy" src="" alt="">
+    <p class="cursr" > <bdo dir="rtl">hello</bdo> </p>
+</body>
+
+</html>

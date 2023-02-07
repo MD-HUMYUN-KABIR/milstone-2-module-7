@@ -1,0 +1,131 @@
+.a1 {
+    height: 80px;
+    width: 200px;
+    border: 1px solid red;
+    /* overflow: hidden; */
+    /* overflow: scroll; */
+    /* overflow-y: scroll; */
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.a2 {
+    height: 80px;
+    width: 200px;
+    border: 1px solid red;
+    overflow: hidden;
+}
+.short{
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    overflow: hidden;
+}
+.mini{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.tr, .trin{
+    width: 60px;
+    height: 60px;
+    border: 2px solid rebeccapurple;
+}
+.tr{
+background-color: bisque;
+}
+.trin{
+background-color: aquamarine;
+transform: scale(.5) rotate(45deg) translate(50px,50px);
+}
+.trn{
+    margin-bottom: 150px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    background-color: aquamarine;
+    /* transition: width 2s linear 2s; */
+    transition: width 2s ease-in-out, height 2s ease-in-out, transform 2s ease-in-out ;
+}
+.trn:hover{
+ width: 300px;
+ height: 150px;
+ transform: rotate(180deg);
+}
+.field{
+    height: 200px;
+    width: 100%;
+    border: 4px dotted red;
+    margin-bottom: 50px;
+}
+.field:hover .bat{
+    transform: rotate(-30deg);
+    transform-origin: top right;
+}
+.field:hover .ball{
+    transform: translate(200px,-200px);
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+.bat{
+    width: 20px;
+    height: 128px;
+    background-color: aquamarine;
+    margin: auto;
+    position: relative;
+    bottom: -110px;
+    transform: rotate(40deg);
+    transition: transform .2s ease-in;
+}
+.ball{
+    height: 25px;
+    width: 25px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+    left: 579px;
+    bottom: -47px;
+    transition: transform .2s ease-out .25s;
+}
+.animat{
+    width: 1000px;
+    height: 400px;
+    background-color: orange;
+    margin-bottom: 100px;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0, 8, 255); 
+    animation: slide 2s ease-in-out .1s infinite alternate; 
+    animation-play-state: running;
+    position: relative;
+}
+@keyframes slide{
+    0%{
+background-color: aquamarine;
+left: 0;
+top: 0;
+    }
+    25%{
+        top: 300px;
+        transform: scale(1);
+        background-color: yellow;
+    }
+    50%{
+        top: 0;
+        transform: scale(1.2);
+    }
+    75%{
+        top: 300px;
+        background-color: rebeccapurple;
+        transform: scale(1.5);
+    }
+   
+    100%{
+background-color: blue;
+left: 900px;
+top: 0;
+
+    }
+}
+
